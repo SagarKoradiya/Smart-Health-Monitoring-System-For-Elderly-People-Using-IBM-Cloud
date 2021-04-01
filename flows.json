@@ -1,0 +1,993 @@
+[
+    {
+        "id": "2050b11f.cdde2e",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "ce8e55f7.880b88",
+        "type": "ibmiot",
+        "name": "Nodemcu",
+        "keepalive": "60",
+        "serverName": "i2kxvc.messaging.internetofthings.ibmcloud.com",
+        "cleansession": true,
+        "appId": "",
+        "shared": false
+    },
+    {
+        "id": "12b8656b.1f09db",
+        "type": "ui_tab",
+        "name": "Health Care",
+        "icon": "Smart Health Care",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "2a87d186.acd1de",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-dark",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "reset": false
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#097479",
+                    "value": "#097479",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#097479",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#0eb8c0",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#555555",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#eeeeee",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#097479",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "26f06a56.10ab16",
+        "type": "ui_group",
+        "name": "Personal Detail",
+        "tab": "12b8656b.1f09db",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "9f7ca408.0a3838",
+        "type": "ui_group",
+        "name": "Body Temperature Fahrenheit",
+        "tab": "12b8656b.1f09db",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "feb42d86.55feb",
+        "type": "ui_group",
+        "name": "Body Temperature Celsius",
+        "tab": "12b8656b.1f09db",
+        "order": 4,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "cff40af2.0febf8",
+        "type": "ui_group",
+        "name": "Pulse Rate",
+        "tab": "12b8656b.1f09db",
+        "order": 5,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "65e70492.96477c",
+        "type": "ui_group",
+        "name": "Contact to Doctor",
+        "tab": "12b8656b.1f09db",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "a9d9015a.f7a89",
+        "type": "ibmiot in",
+        "z": "2050b11f.cdde2e",
+        "authentication": "apiKey",
+        "apiKey": "ce8e55f7.880b88",
+        "inputType": "evt",
+        "logicalInterface": "",
+        "ruleId": "",
+        "deviceId": "1001",
+        "applicationId": "",
+        "deviceType": "nodemcu",
+        "eventType": "+",
+        "commandType": "",
+        "format": "json",
+        "name": "IBM IoT",
+        "service": "registered",
+        "allDevices": "",
+        "allApplications": "",
+        "allDeviceTypes": "",
+        "allLogicalInterfaces": "",
+        "allEvents": true,
+        "allCommands": "",
+        "allFormats": "",
+        "qos": 0,
+        "x": 130,
+        "y": 100,
+        "wires": [
+            [
+                "57ab8eb5.56fa7",
+                "cc40f477.ec5988",
+                "60f14f14.bbad2",
+                "641a8894.d45318",
+                "cf73c3dd.f8016",
+                "b891b6a6.9277d8",
+                "d1b68036.5dacf"
+            ]
+        ]
+    },
+    {
+        "id": "cc40f477.ec5988",
+        "type": "function",
+        "z": "2050b11f.cdde2e",
+        "name": "Body Temperature F",
+        "func": "global.set('temp',msg.payload.d.temp)\nreturn {payload:msg.payload.d.temp}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 500,
+        "y": 180,
+        "wires": [
+            [
+                "57ab8eb5.56fa7",
+                "5cab062e.21fd98"
+            ]
+        ]
+    },
+    {
+        "id": "57ab8eb5.56fa7",
+        "type": "debug",
+        "z": "2050b11f.cdde2e",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1070,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "60f14f14.bbad2",
+        "type": "function",
+        "z": "2050b11f.cdde2e",
+        "name": "Pulse Rate",
+        "func": "global.set('pulse',msg.payload.d.pulse)\nreturn {payload:msg.payload.d.pulse}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 470,
+        "y": 340,
+        "wires": [
+            [
+                "57ab8eb5.56fa7",
+                "9497d89f.9846e8"
+            ]
+        ]
+    },
+    {
+        "id": "5cab062e.21fd98",
+        "type": "ui_gauge",
+        "z": "2050b11f.cdde2e",
+        "name": "Body Temperature Fahrenheit",
+        "group": "9f7ca408.0a3838",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "",
+        "label": "°F",
+        "format": "{{value}}",
+        "min": "50",
+        "max": "120",
+        "colors": [
+            "#ffff00",
+            "#00ff00",
+            "#ff0000"
+        ],
+        "seg1": "97",
+        "seg2": "99",
+        "x": 1090,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "9497d89f.9846e8",
+        "type": "ui_gauge",
+        "z": "2050b11f.cdde2e",
+        "name": "Pulse Rate",
+        "group": "cff40af2.0febf8",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "donut",
+        "title": "",
+        "label": "Beats/Minute",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "120",
+        "colors": [
+            "#ffff00",
+            "#00ff00",
+            "#ff0000"
+        ],
+        "seg1": "60",
+        "seg2": "100",
+        "x": 1030,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "b24fd120.886f4",
+        "type": "http in",
+        "z": "2050b11f.cdde2e",
+        "name": "",
+        "url": "/data",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 120,
+        "y": 720,
+        "wires": [
+            [
+                "b31d40a2.4907f"
+            ]
+        ]
+    },
+    {
+        "id": "b31d40a2.4907f",
+        "type": "function",
+        "z": "2050b11f.cdde2e",
+        "name": "",
+        "func": "msg.payload={\"temp\":global.get('temp'),\"tempc\":global.get('tempc'),\"pulse\":global.get('pulse'),\"name\":global.get('name'),\"contact\":global.get('contact'),\"drname\":global.get('drname')}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 460,
+        "y": 720,
+        "wires": [
+            [
+                "4209d4f2.73906c"
+            ]
+        ]
+    },
+    {
+        "id": "4209d4f2.73906c",
+        "type": "http response",
+        "z": "2050b11f.cdde2e",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 930,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "641a8894.d45318",
+        "type": "function",
+        "z": "2050b11f.cdde2e",
+        "name": "Body Temperature C",
+        "func": "global.set('tempc',msg.payload.d.tempc)\nreturn {payload:msg.payload.d.tempc}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 500,
+        "y": 260,
+        "wires": [
+            [
+                "8747f3f5.391b9",
+                "57ab8eb5.56fa7"
+            ]
+        ]
+    },
+    {
+        "id": "8747f3f5.391b9",
+        "type": "ui_gauge",
+        "z": "2050b11f.cdde2e",
+        "name": "Body Temperature Celsius",
+        "group": "feb42d86.55feb",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "",
+        "label": "°C",
+        "format": "{{value}}",
+        "min": "30",
+        "max": "45",
+        "colors": [
+            "#ffff00",
+            "#00ff00",
+            "#ff0000"
+        ],
+        "seg1": "36",
+        "seg2": "37.5",
+        "x": 1080,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "cf73c3dd.f8016",
+        "type": "function",
+        "z": "2050b11f.cdde2e",
+        "name": "Name",
+        "func": "global.set('name',msg.payload.d.name)\nreturn {payload:msg.payload.d.name}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 450,
+        "y": 420,
+        "wires": [
+            [
+                "d55ac47a.b56d58"
+            ]
+        ]
+    },
+    {
+        "id": "d55ac47a.b56d58",
+        "type": "ui_text",
+        "z": "2050b11f.cdde2e",
+        "group": "26f06a56.10ab16",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Name : ",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "x": 1020,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "b891b6a6.9277d8",
+        "type": "function",
+        "z": "2050b11f.cdde2e",
+        "name": "Contact Number",
+        "func": "global.set('contact',msg.payload.d.contact)\nreturn {payload:msg.payload.d.contact}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 480,
+        "y": 500,
+        "wires": [
+            [
+                "fe8125e0.dc4fe8"
+            ]
+        ]
+    },
+    {
+        "id": "d1b68036.5dacf",
+        "type": "function",
+        "z": "2050b11f.cdde2e",
+        "name": "Dr. Name",
+        "func": "global.set('drname',msg.payload.d.drname)\nreturn {payload:msg.payload.d.drname}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 460,
+        "y": 580,
+        "wires": [
+            [
+                "a8a6e926.0f8b28"
+            ]
+        ]
+    },
+    {
+        "id": "fe8125e0.dc4fe8",
+        "type": "ui_text",
+        "z": "2050b11f.cdde2e",
+        "group": "26f06a56.10ab16",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Contact No :",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "x": 1030,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "a8a6e926.0f8b28",
+        "type": "ui_text",
+        "z": "2050b11f.cdde2e",
+        "group": "26f06a56.10ab16",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Dr. Name :",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "x": 1030,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "3beee87c.0a1538",
+        "type": "inject",
+        "z": "2050b11f.cdde2e",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "v": "temp",
+                "vt": "global"
+            },
+            {
+                "p": "topic",
+                "v": "tempc",
+                "vt": "global"
+            },
+            {
+                "p": "topic",
+                "v": "pulse",
+                "vt": "global"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "get",
+        "payloadType": "global",
+        "x": 140,
+        "y": 1240,
+        "wires": [
+            [
+                "c6980d9d.5cd81",
+                "85d25330.8d8dc"
+            ]
+        ]
+    },
+    {
+        "id": "85d25330.8d8dc",
+        "type": "function",
+        "z": "2050b11f.cdde2e",
+        "name": "Temperature F",
+        "func": "msg.payload={\"temp\":global.get('temp')}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 320,
+        "y": 1040,
+        "wires": [
+            [
+                "869c219b.1e232"
+            ]
+        ]
+    },
+    {
+        "id": "869c219b.1e232",
+        "type": "switch",
+        "z": "2050b11f.cdde2e",
+        "name": "Temp F",
+        "property": "temp",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "gte",
+                "v": "99",
+                "vt": "num"
+            },
+            {
+                "t": "lt",
+                "v": "97",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 580,
+        "y": 1040,
+        "wires": [
+            [
+                "a04d50e3.ee0e6",
+                "daca0ba4.fef988"
+            ],
+            [
+                "2196f3f5.9476bc",
+                "daca0ba4.fef988"
+            ]
+        ]
+    },
+    {
+        "id": "c6980d9d.5cd81",
+        "type": "function",
+        "z": "2050b11f.cdde2e",
+        "name": "Pulse",
+        "func": "msg.payload={\"pulse\":global.get('pulse')}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 290,
+        "y": 1420,
+        "wires": [
+            [
+                "ae3b5d90.e4bd7"
+            ]
+        ]
+    },
+    {
+        "id": "ae3b5d90.e4bd7",
+        "type": "switch",
+        "z": "2050b11f.cdde2e",
+        "name": "Pulse",
+        "property": "pulse",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "gt",
+                "v": "100",
+                "vt": "num"
+            },
+            {
+                "t": "lt",
+                "v": "60",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 530,
+        "y": 1420,
+        "wires": [
+            [
+                "3a13e4e3.1e4dfc",
+                "b727a47f.015c18"
+            ],
+            [
+                "b727a47f.015c18",
+                "e28fc771.511398"
+            ]
+        ]
+    },
+    {
+        "id": "a04d50e3.ee0e6",
+        "type": "ui_toast",
+        "z": "2050b11f.cdde2e",
+        "position": "dialog",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 1,
+        "ok": "OK",
+        "cancel": "",
+        "raw": true,
+        "topic": "Your Body Temperature High .....Please Contact Your Docter.",
+        "name": "",
+        "x": 910,
+        "y": 980,
+        "wires": [
+            [
+                "52b1aa11.7432c4"
+            ]
+        ]
+    },
+    {
+        "id": "2196f3f5.9476bc",
+        "type": "ui_toast",
+        "z": "2050b11f.cdde2e",
+        "position": "dialog",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 1,
+        "ok": "OK",
+        "cancel": "",
+        "raw": true,
+        "topic": "Your Body Temperature Low .....Please Contact Your Docter.",
+        "name": "",
+        "x": 910,
+        "y": 1100,
+        "wires": [
+            [
+                "52b1aa11.7432c4"
+            ]
+        ]
+    },
+    {
+        "id": "e28fc771.511398",
+        "type": "ui_toast",
+        "z": "2050b11f.cdde2e",
+        "position": "dialog",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 1,
+        "ok": "OK",
+        "cancel": "",
+        "raw": true,
+        "topic": "Your HeartBeat is Low .....Please Contect Your Docter.",
+        "name": "",
+        "x": 910,
+        "y": 1480,
+        "wires": [
+            [
+                "52b1aa11.7432c4"
+            ]
+        ]
+    },
+    {
+        "id": "3a13e4e3.1e4dfc",
+        "type": "ui_toast",
+        "z": "2050b11f.cdde2e",
+        "position": "dialog",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 1,
+        "ok": "OK",
+        "cancel": "",
+        "raw": true,
+        "topic": "Your HeartBeat is High .....Please Contect Your Docter.",
+        "name": "",
+        "x": 910,
+        "y": 1360,
+        "wires": [
+            [
+                "52b1aa11.7432c4"
+            ]
+        ]
+    },
+    {
+        "id": "16ef31d0.74b84e",
+        "type": "http request",
+        "z": "2050b11f.cdde2e",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "https://www.fast2sms.com/dev/bulkV2?authorization=hNZ0J4PWeg7dkzrITivcF1a6Q5M2LDtEmSu3H8bqwolKx9RyBf8LifbF4VGmYp9KzrXD6nNsO3udSaoR&route=q&message=Your%20Body%20Temperature%20High%20.....Please%20Contact%20Your%20Doctor&language=english&flash=1&numbers=9825695811",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 910,
+        "y": 920,
+        "wires": [
+            [
+                "52b1aa11.7432c4"
+            ]
+        ]
+    },
+    {
+        "id": "80c9ac4d.11436",
+        "type": "http request",
+        "z": "2050b11f.cdde2e",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "https://www.fast2sms.com/dev/bulkV2?authorization=hNZ0J4PWeg7dkzrITivcF1a6Q5M2LDtEmSu3H8bqwolKx9RyBf8LifbF4VGmYp9KzrXD6nNsO3udSaoR&route=q&message=Your%20Body%20Temperature%20Low%20.....Please%20Contact%20Your%20Doctor.&language=english&flash=1&numbers=9825695811",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 910,
+        "y": 1160,
+        "wires": [
+            [
+                "52b1aa11.7432c4"
+            ]
+        ]
+    },
+    {
+        "id": "1f12127a.f68bfe",
+        "type": "http request",
+        "z": "2050b11f.cdde2e",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "https://www.fast2sms.com/dev/bulkV2?authorization=hNZ0J4PWeg7dkzrITivcF1a6Q5M2LDtEmSu3H8bqwolKx9RyBf8LifbF4VGmYp9KzrXD6nNsO3udSaoR&route=q&message=Your%20Heartbeat%20is%20low%20.....Please%20Contact%20Your%20Doctor.%0A&language=english&flash=1&numbers=9825695811",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 910,
+        "y": 1540,
+        "wires": [
+            [
+                "52b1aa11.7432c4"
+            ]
+        ]
+    },
+    {
+        "id": "f5b63ac3.25fe58",
+        "type": "http request",
+        "z": "2050b11f.cdde2e",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "https://www.fast2sms.com/dev/bulkV2?authorization=hNZ0J4PWeg7dkzrITivcF1a6Q5M2LDtEmSu3H8bqwolKx9RyBf8LifbF4VGmYp9KzrXD6nNsO3udSaoR&route=q&message=Your%20Heartbeat%20is%20High%20.....Please%20Contact%20Your%20Doctor.&language=english&flash=1&numbers=9825695811",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 910,
+        "y": 1300,
+        "wires": [
+            [
+                "52b1aa11.7432c4"
+            ]
+        ]
+    },
+    {
+        "id": "daca0ba4.fef988",
+        "type": "debug",
+        "z": "2050b11f.cdde2e",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 910,
+        "y": 1040,
+        "wires": []
+    },
+    {
+        "id": "b727a47f.015c18",
+        "type": "debug",
+        "z": "2050b11f.cdde2e",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 910,
+        "y": 1420,
+        "wires": []
+    },
+    {
+        "id": "52b1aa11.7432c4",
+        "type": "debug",
+        "z": "2050b11f.cdde2e",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1290,
+        "y": 1240,
+        "wires": []
+    },
+    {
+        "id": "872ac46a.a62588",
+        "type": "ui_button",
+        "z": "2050b11f.cdde2e",
+        "name": "Contact",
+        "group": "65e70492.96477c",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Inform to doctor about emergency",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "{\"command\":\"contact\"}",
+        "payloadType": "json",
+        "topic": "payload",
+        "topicType": "msg",
+        "x": 260,
+        "y": 1860,
+        "wires": [
+            [
+                "7fe43e33.89eeb",
+                "ca60ce07.ccabd"
+            ]
+        ]
+    },
+    {
+        "id": "7fe43e33.89eeb",
+        "type": "debug",
+        "z": "2050b11f.cdde2e",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 890,
+        "y": 1820,
+        "wires": []
+    },
+    {
+        "id": "12ca050c.9b519b",
+        "type": "function",
+        "z": "2050b11f.cdde2e",
+        "name": "",
+        "func": "msg.payload=msg.payload.command\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 540,
+        "y": 2000,
+        "wires": [
+            [
+                "9064c6ba.6ee888",
+                "ca60ce07.ccabd",
+                "7fe43e33.89eeb"
+            ]
+        ]
+    },
+    {
+        "id": "9064c6ba.6ee888",
+        "type": "http response",
+        "z": "2050b11f.cdde2e",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 910,
+        "y": 2000,
+        "wires": []
+    },
+    {
+        "id": "59cfea30.9a41a4",
+        "type": "http in",
+        "z": "2050b11f.cdde2e",
+        "name": "",
+        "url": "/doctor",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 210,
+        "y": 2000,
+        "wires": [
+            [
+                "12ca050c.9b519b"
+            ]
+        ]
+    },
+    {
+        "id": "ca60ce07.ccabd",
+        "type": "ibmiot out",
+        "z": "2050b11f.cdde2e",
+        "authentication": "apiKey",
+        "apiKey": "ce8e55f7.880b88",
+        "outputType": "evt",
+        "deviceId": "1001",
+        "deviceType": "1.2.9",
+        "eventCommandType": "home",
+        "format": "json",
+        "data": "data",
+        "qos": 0,
+        "name": "IBM IoT",
+        "service": "registered",
+        "x": 880,
+        "y": 1900,
+        "wires": []
+    }
+]
